@@ -165,9 +165,70 @@
     <Compile Include="Migrations\202004071926338_AddedCustomersView.designer.cs">
       <DependentUpon>202004071926338_AddedCustomersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006082104456_AddedNameFieldInMembershipTypeClass.cs" />
+    <Compile Include="Migrations\202006082104456_AddedNameFieldInMembershipTypeClass.designer.cs">
+      <DependentUpon>202006082104456_AddedNameFieldInMembershipTypeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082130002_SetNameInMembershipTypeToRequired.cs" />
+    <Compile Include="Migrations\202006082130002_SetNameInMembershipTypeToRequired.designer.cs">
+      <DependentUpon>202006082130002_SetNameInMembershipTypeToRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082134050_UpdatedMembershipTyp.cs" />
+    <Compile Include="Migrations\202006082134050_UpdatedMembershipTyp.designer.cs">
+      <DependentUpon>202006082134050_UpdatedMembershipTyp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082141296_UpdateDataInMemebershipType.cs" />
+    <Compile Include="Migrations\202006082141296_UpdateDataInMemebershipType.designer.cs">
+      <DependentUpon>202006082141296_UpdateDataInMemebershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082152298_UpdateDataInMemebershipTypes.cs" />
+    <Compile Include="Migrations\202006082152298_UpdateDataInMemebershipTypes.designer.cs">
+      <DependentUpon>202006082152298_UpdateDataInMemebershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082221259_CutomerDateOfBirthType.cs" />
+    <Compile Include="Migrations\202006082221259_CutomerDateOfBirthType.designer.cs">
+      <DependentUpon>202006082221259_CutomerDateOfBirthType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006082243550_AlterBirthDateToNullable.cs" />
+    <Compile Include="Migrations\202006082243550_AlterBirthDateToNullable.designer.cs">
+      <DependentUpon>202006082243550_AlterBirthDateToNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091602350_UpdatedDateTypeInCustomerClass.cs" />
+    <Compile Include="Migrations\202006091602350_UpdatedDateTypeInCustomerClass.designer.cs">
+      <DependentUpon>202006091602350_UpdatedDateTypeInCustomerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091623074_DeleteBirthDateCoulmn.cs" />
+    <Compile Include="Migrations\202006091623074_DeleteBirthDateCoulmn.designer.cs">
+      <DependentUpon>202006091623074_DeleteBirthDateCoulmn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091638043_AddedDateofBirthFieldToCustomer.cs" />
+    <Compile Include="Migrations\202006091638043_AddedDateofBirthFieldToCustomer.designer.cs">
+      <DependentUpon>202006091638043_AddedDateofBirthFieldToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006092258204_newmigration.cs" />
+    <Compile Include="Migrations\202006092258204_newmigration.designer.cs">
+      <DependentUpon>202006092258204_newmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006101414184_AddingValuestoBookClass.cs" />
+    <Compile Include="Migrations\202006101414184_AddingValuestoBookClass.designer.cs">
+      <DependentUpon>202006101414184_AddingValuestoBookClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006101419445_AddGenreTypeColumntoBookstable.cs" />
+    <Compile Include="Migrations\202006101419445_AddGenreTypeColumntoBookstable.designer.cs">
+      <DependentUpon>202006101419445_AddGenreTypeColumntoBookstable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006101732409_Genres.cs" />
+    <Compile Include="Migrations\202006101732409_Genres.designer.cs">
+      <DependentUpon>202006101732409_Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006101749505_BooksTable.cs" />
+    <Compile Include="Migrations\202006101749505_BooksTable.designer.cs">
+      <DependentUpon>202006101749505_BooksTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +280,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +319,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004071926338_AddedCustomersView.resx">
       <DependentUpon>202004071926338_AddedCustomersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082104456_AddedNameFieldInMembershipTypeClass.resx">
+      <DependentUpon>202006082104456_AddedNameFieldInMembershipTypeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082130002_SetNameInMembershipTypeToRequired.resx">
+      <DependentUpon>202006082130002_SetNameInMembershipTypeToRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082134050_UpdatedMembershipTyp.resx">
+      <DependentUpon>202006082134050_UpdatedMembershipTyp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082141296_UpdateDataInMemebershipType.resx">
+      <DependentUpon>202006082141296_UpdateDataInMemebershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082152298_UpdateDataInMemebershipTypes.resx">
+      <DependentUpon>202006082152298_UpdateDataInMemebershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082221259_CutomerDateOfBirthType.resx">
+      <DependentUpon>202006082221259_CutomerDateOfBirthType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006082243550_AlterBirthDateToNullable.resx">
+      <DependentUpon>202006082243550_AlterBirthDateToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091602350_UpdatedDateTypeInCustomerClass.resx">
+      <DependentUpon>202006091602350_UpdatedDateTypeInCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091623074_DeleteBirthDateCoulmn.resx">
+      <DependentUpon>202006091623074_DeleteBirthDateCoulmn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091638043_AddedDateofBirthFieldToCustomer.resx">
+      <DependentUpon>202006091638043_AddedDateofBirthFieldToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006092258204_newmigration.resx">
+      <DependentUpon>202006092258204_newmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006101414184_AddingValuestoBookClass.resx">
+      <DependentUpon>202006101414184_AddingValuestoBookClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006101419445_AddGenreTypeColumntoBookstable.resx">
+      <DependentUpon>202006101419445_AddGenreTypeColumntoBookstable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006101732409_Genres.resx">
+      <DependentUpon>202006101732409_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006101749505_BooksTable.resx">
+      <DependentUpon>202006101749505_BooksTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

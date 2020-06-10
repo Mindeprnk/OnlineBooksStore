@@ -17,5 +17,10 @@ namespace OnlineBooksStore.Models
         public MembershipType MembershipType { get; set; }
         //MembershipType value
         public byte MembershipTypeId { get; set; }
+           
+        //This Birthdate is not added in the Details View as there is null reference exception occuring.
+        public DateTime? Birthdate { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
     }
 }
