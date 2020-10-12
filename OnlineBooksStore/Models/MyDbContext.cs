@@ -14,8 +14,5 @@ namespace OnlineBooksStore.Models
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Book> Book { get; set; }
-        public DbSet<MembershipType> MembershipTypes { get; set; }
-
-        public DbSet<Genre> Genres { get; set; }
     }
 }
