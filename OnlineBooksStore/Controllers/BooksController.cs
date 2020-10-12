@@ -8,6 +8,7 @@ using OnlineBooksStore.Models;
 using OnlineBooksStore.ViewModel;
 
 
+
 namespace OnlineBooksStore.Controllers
 {
     public class BooksController : Controller
@@ -39,7 +40,7 @@ namespace OnlineBooksStore.Controllers
         //    };
         //}
 
-            //GET: Movies/Random
+            //GET: Books/Random
         public ActionResult Random()
         {
             var book = new Book() { Name = "Ramayan" };
@@ -50,7 +51,7 @@ namespace OnlineBooksStore.Controllers
                 new Customer{ Name="Vinay"}
             };
 
-            var viewModel = new RandomBookViewModel
+            var viewModel = new BookFormViewModel
             {
                 Book = book,
                 Customers = customers
@@ -59,6 +60,58 @@ namespace OnlineBooksStore.Controllers
             return View(viewModel);
         }
 
+        public ViewResult New()
+        {
+            var genretype = _context.Genres.ToList();
+
+            var ViewModel = new BookFormViewModel
+            {
+                Genres = genretype
+            };
+
+            return View("NewBook", ViewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var book = _context.Book.SingleOrDefault(b => b.Id == id);
+
+            if (book == null)
+                return HttpNotFound();
+            var viewModel = new BookFormViewModel
+            {
+                Book = book,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("NewBook", viewModel);
+
+        }
+
+        [HttpPost]
+        public ActionResult Save(Book book)
+        {
+            if (book.Id == 0)
+            {
+                book.DateAdded = DateTime.Now;
+                _context.Book.Add(book);
+            }
+                
+            else
+            {
+                var bookInDb = _context.Book.Single(b => b.Id == book.Id);
+
+                bookInDb.Name = book.Name;
+                bookInDb.GenreId = book.GenreId;
+                bookInDb.NumberInStock = book.NumberInStock;
+                bookInDb.ReleaseDate = book.ReleaseDate;
+              
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Books");
+        }
         public ActionResult Details(int id)
         {
             var book = _context.Book.Include(b => b.Genre).SingleOrDefault(b => b.Id == id);

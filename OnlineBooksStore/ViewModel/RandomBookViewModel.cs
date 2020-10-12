@@ -10,5 +10,7 @@ namespace OnlineBooksStore.ViewModel
     {
         public Book Book { get; set; }
         public List<Customer> Customers { get; set; }
+
+        public List<Genre> Genres { get; set; }
     }
 }
